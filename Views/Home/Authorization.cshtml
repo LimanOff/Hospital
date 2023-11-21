@@ -1,0 +1,14 @@
+﻿﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Авторизация";
+}
+
+<form class="Form" method="post">
+    <h1>Авторизация</h1>
+
+    <input name="login" class="form-control" type="text" placeholder="Логин" />
+    <input name="password" class="form-control" type="text" placeholder="Пароль" />
+
+    <input class="btn btn-primary" type="submit" value="Войти" formaction="/Home/Authorization" />
+    <input class="btn btn-primary" type="submit" value="Не зарегистрированы?" formaction="/Home/LoadRegForm" />
+</form>
