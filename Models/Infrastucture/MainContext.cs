@@ -20,15 +20,20 @@ namespace Hospital.Models.Infrastucture
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Gender>().HasData(
-                    new Gender {Id = 1, Name = "Мужчина"},
-                    new Gender {Id = 2, Name = "Женщина"}
+                    new Gender { Id = 1, Name = "Мужчина" },
+                    new Gender { Id = 2, Name = "Женщина" }
                );
 
-             modelBuilder.Entity<Role>().HasData(
-                    new Role {Id = 1, Name = "Клиент"},
-                    new Role {Id = 2, Name = "Врач"},
-                    new Role {Id = 3, Name = "Администратор"}
-               );
+            modelBuilder.Entity<Role>().HasData(
+                   new Role { Id = 1, Name = "Клиент" },
+                   new Role { Id = 2, Name = "Врач" },
+                   new Role { Id = 3, Name = "Администратор" }
+              );
+
+            modelBuilder.Entity<User>().HasData(
+                new User { Id = 1, Login = "Doctor", Password = "Doctor", RoleId = 2},
+                new User { Id = 2, Login = "Admin", Password = "Admin", RoleId = 3 }
+                );
         }
     }
 }
