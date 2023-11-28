@@ -11,12 +11,36 @@
             <img class="w-50 rounded" src="https://avatars.mds.yandex.net/i?id=a43db7032d3f26eb9eecbb0cbe636fd05e43fc91-10414552-images-thumbs&n=13" alt="куплинов.png" />
         </div>
         <div class="col text-center">
-            <input class="form-control mt-2 w-50 m-auto" type="text" placeholder="Фамилия" />
-            <input class="form-control mt-2 w-50 m-auto" type="text" placeholder="Отчество" />
-            <input class="form-control mt-2 w-50 m-auto" type="text" placeholder="Имя" />
+            <input name="LastName" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Фамилия" />
+            <input name="Patronymic" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Отчество" />
+            <input name="FirstName" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Имя" />
             <h6 class="mt-3">Дата рождения</h6>
-            <input class="form-control mt-2 w-50 m-auto" type="date" />
-            <input class="form-control mt-2 w-50 m-auto" type="text" placeholder="Пол" />
+            <input name="DateOfBirth" class="form-control mt-2 w-50 m-auto" type="date" />
+            <input name="Gender" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Пол" />
         </div>
+    </div>
+</div>
+
+<div class="card form-group mt-3">
+    <div class="card-head form-group">
+        <h1 class="form-control">Контактная информация</h1>
+    </div>
+    <div class="card-body form-group">
+        <input name="Address" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Адрес"/>
+        <input name="PhoneNumber" class="form-control mt-2 w-50 m-auto" type="tel" placeholder="Телефон" />
+        <input name="Email" class="form-control mt-2 w-50 m-auto" type="email" placeholder="Электронная почта" />
+    </div>
+</div>
+
+<div class="card form-group mt-3">
+    <div class="card-head form-group">
+        <h1 class="form-control">Информация о медицинском состоянии пациента</h1>
+    </div>
+    <div class="card-body form-group">
+        <textarea name="MedicalHistory" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Анамнез"></textarea>
+        <textarea name="TestResults" class="form-control mt-2 w-50 m-auto" type="tel" placeholder="Результаты обследований"></textarea>
+        <textarea name="Diagnoses" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Диагнозы"></textarea>
+        <textarea name="Recommendations" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Рекомендации"></textarea>
+        <textarea name="Medications" class="form-control mt-2 w-50 m-auto" type="text" placeholder="Рекомендации"></textarea>
     </div>
 </div>
