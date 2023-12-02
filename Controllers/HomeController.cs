@@ -22,11 +22,17 @@ namespace Hospital.Controllers
         {
             if (login != null && password != null)
             {
-                User u = new() { Login = login, Password = password, RoleId = 1};
-                _context.Users.Add(u);
-                _context.SaveChanges();
+                User u = new() { Login = login, Password = password, RoleId = 1 };
 
-                return RedirectToAction("Index");
+                if (_context.Users.FirstOrDefault(u => u.Login == login && u.Password == password) == null)
+                {
+                    _context.Users.Add(u);
+                    _context.SaveChanges();
+
+                    Program.CurrentUser = u;
+
+                    return RedirectToAction("Index");
+                }
             }
             return View();
         }
@@ -43,6 +49,7 @@ namespace Hospital.Controllers
 
                 if (u != null)
                 {
+                    Program.CurrentUser = u;
                     return RedirectToAction("Index");
                 }
             }
