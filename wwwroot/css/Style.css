@@ -1,0 +1,64 @@
+﻿﻿ /* Google Fonts (Kavoon, Roboto) */
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Grid {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-gap: 50px;
+    grid-template-areas:
+        "header header"
+        "body body"
+        "footer footer";
+}
+
+.GridBody {
+    grid-area: body;
+}
+
+footer {
+    background: #0077B5;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+}
+    footer > h5 {
+        font-size: 12px;
+        color: white;
+        margin-left: 50px;
+    }
+
+header {
+    background: #0077B5;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+}
+    header > .Title {
+        color: #FFF;
+        margin-left: 50px;
+        font-family: 'Kavoon', serif;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: 50px;
+    }
+
+.Form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+    .Form > input {
+        margin-top: 40px;
+        text-align: center;
+        width: 250px;
+    }
